@@ -90,7 +90,10 @@ public class Player : MonoBehaviour {
 			velocity.y = minJumpVelocity;
 		}
 	}
-		
+
+	public void OnSlideInput() {
+		velocity.x *= 4;
+    }
 
 	void HandleWallSliding() {
 		wallDirX = (controller.collisions.left) ? -1 : 1;
